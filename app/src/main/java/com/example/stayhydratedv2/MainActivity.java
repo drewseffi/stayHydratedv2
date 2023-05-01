@@ -12,18 +12,34 @@ import android.bluetooth.le.ScanResult;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private BleScanner mBleScanner;
+    int level = 1;
+    int xp = 0;
+    int xpCap = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        Button drankButton = findViewById(R.id.btnDrank);
+        drankButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                xp += 10;
+                if (xp == xpCap)
+                {
+                    level += 1;
+                    xpCap += 100;
+                }
+            }
+        });
 
         mBleScanner = new BleScanner(this);
         mBleScanner.scanLeDevice(true, new BleScanner.BleScanCallback() {
