@@ -11,17 +11,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="162dp"
-        android:layout_marginTop="113dp"
+        android:layout_marginTop="203dp"
         android:layout_marginEnd="163dp"
-        android:layout_marginBottom="599dp"
         android:text="Drank 0 times"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnDrank"
@@ -30,69 +26,63 @@
         android:layout_marginStart="70dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="71dp"
-        android:layout_marginBottom="318dp"
         android:text="I took a drink!"
         android:textSize="24sp"
         app:iconTint="#2196F3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDrinkTimer" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtDrinkTimer"
-        android:layout_width="149dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="131dp"
-        android:layout_marginTop="98dp"
-        android:layout_marginEnd="131dp"
-        android:layout_marginBottom="22dp"
-        android:text="00:00"
+        android:layout_width="370dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="21dp"
+        android:text="Press button to start timer!"
         android:textAlignment="center"
-        android:textSize="48sp"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btnDrank"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDrankTimes" />
+        app:layout_constraintTop_toBottomOf="@+id/txtDrankTimes"
+        app:layout_constraintVertical_bias="0.482" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="138dp"
         android:layout_height="136dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="179dp"
-        android:layout_marginEnd="272dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnDrank"
-        app:srcCompat="@drawable/water_drop" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/water_drop"
+        tools:layout_editor_absoluteX="2dp" />
 
     <TextView
         android:id="@+id/txtLevel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="11dp"
-        android:layout_marginTop="187dp"
-        android:layout_marginBottom="101dp"
+        android:layout_marginTop="500dp"
         android:text="Level:"
         android:textAlignment="viewStart"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/btnDrank" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtXP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="62dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="13dp"
         android:text="XP:"
         android:textAlignment="viewStart"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/txtLevel" />
 </androidx.constraintlayout.widget.ConstraintLayout>
